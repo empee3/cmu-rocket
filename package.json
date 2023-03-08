@@ -1,0 +1,23 @@
+{
+  "name": "cmu-rocket",
+  "version": "1.0.0",
+  "description": "<h1>CMU Rocket</h1>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/empee3/cmu-rocket.git"
+  },
+  "author": "Melissa Piper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/empee3/cmu-rocket/issues"
+  },
+  "homepage": "https://github.com/empee3/cmu-rocket#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
