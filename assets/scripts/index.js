@@ -1,3 +1,5 @@
+var $jq = jQuery.noConflict();
+
 (function () {
   const d = document;
   var accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
