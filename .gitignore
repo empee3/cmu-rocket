@@ -1,7 +1,8 @@
-node_modules
-build
+node_modules/
+.cache/
+build/
 npm-debug.log
 notes.md
 .nyc
-.env
+.env*
 .DS_Store
