@@ -55,6 +55,7 @@ strong {
   transition: all 0.2s ease-in-out;
   z-index: 100;
 }
+
 .skipnav:focus {
   background: #ffffff;
   left: 0;
@@ -84,7 +85,7 @@ body {
   margin: 0 auto;
   color: #4b484b;
   font-weight: 400;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -138,7 +139,7 @@ h2,
   letter-spacing: 0.06em;
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+  font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -148,34 +149,34 @@ h3,
   color: #c4122f;
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+  font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
   font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 @media (min-width: 760px) {
   h3,
   .h3 {
     font-size: 36px;
   }
 }
-
 h4,
 .h4 {
   color: #c4122f;
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
 }
+
 @media (min-width: 760px) {
   h4,
   .h4 {
     font-size: 18px;
   }
 }
-
 h5,
 .h5 {
   margin-top: 24px;
@@ -232,6 +233,7 @@ ol.clean {
   list-style: none;
   margin-left: 0;
 }
+
 ul.clean li,
 ol.clean li {
   padding-left: 0;
@@ -453,6 +455,7 @@ body {
   margin: 0 auto;
   display: block;
 }
+
 @media (min-width: 760px) {
   .container,
   .contained {
@@ -468,25 +471,27 @@ body {
 }
 .container:before,
 .contained:before {
-  content: '';
+  content: "";
   display: table;
 }
+
 .container:after,
 .contained:after {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: ' ';
+  content: " ";
   clear: both;
 }
+
 .container.relative,
 .contained.relative {
   position: relative;
 }
 
 .more-link:after {
-  content: '\f301';
-  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  content: "\f301";
+  font: normal normal normal 14px/1 "Material-Design-Iconic-Font";
   display: inline-block;
   font-size: inherit;
   text-rendering: auto;
@@ -507,6 +512,7 @@ body {
   -webkit-transition: width 0.3s ease-in;
   transition: width 0.3s ease-in;
 }
+
 @media (min-width: 920px) {
   .post-template-rocket .rocket {
     width: 40%;
@@ -516,10 +522,12 @@ body {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+
 .post-template-rocket .rocket .rocket-image a {
   display: block;
   position: relative;
 }
+
 .post-template-rocket .rocket .rocket-image a #smoke {
   left: 0;
   opacity: 0;
@@ -529,6 +537,7 @@ body {
   -webkit-transition: opacity 1.3s ease-in;
   transition: opacity 1.3s ease-in;
 }
+
 .post-template-rocket .rocket .rocket-image a #smoke.visible {
   -webkit-transition: opacity 1.3s ease-in;
   transition: opacity 1.3s ease-in;
@@ -538,17 +547,21 @@ body {
   -webkit-animation-delay: 1.3s;
   animation-delay: 1.3s;
 }
+
 .post-template-rocket .rocket .rocket-part {
   -webkit-transition: -webkit-filter 0.3s linear, filter 0.3s linear;
   transition: filter 0.3s linear;
 }
+
 .post-template-rocket .rocket .rocket-part.propulsion h4 {
   margin-top: 20px;
 }
+
 .post-template-rocket .rocket .rocket-part:hover {
   -webkit-filter: brightness(85%);
   filter: brightness(85%);
 }
+
 .post-template-rocket .rocket .rocket-text {
   max-height: 0;
   overflow: hidden;
@@ -556,13 +569,15 @@ body {
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out;
 }
+
 .post-template-rocket .rocket .rocket-text p {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.85em;
   font-weight: 600;
   line-height: 1.7em;
   margin-bottom: 15px;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .rocket .rocket-text p {
     font-size: 1em;
@@ -571,9 +586,11 @@ body {
 .post-template-rocket .rocket .rocket-text p:last-of-type {
   margin-bottom: 0;
 }
+
 .post-template-rocket .rocket .rocket-text.is-expanded {
   max-height: 1000px;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .rocket .rocket-text.is-expanded {
     max-height: 500px;
@@ -582,15 +599,16 @@ body {
 .post-template-rocket .rocket .rocket-text-inner {
   padding: 20px 0;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .rocket .rocket-text-inner {
     padding: 36px 0;
   }
 }
-
 .post-template-rocket .rocket-buttons-inner {
   padding: 60px 0;
 }
+
 @media (min-width: 480px) {
   .post-template-rocket .rocket-buttons-inner {
     width: calc(100% - 40px);
@@ -626,16 +644,16 @@ body {
   list-style-type: none;
   margin: 0;
 }
+
 .post-template-rocket .rocket-buttons li a {
   background: #c4122f;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.5),
-    inset 0 -8px 13px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.5), inset 0 -8px 13px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   display: block;
   height: 50px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
   position: relative;
@@ -644,6 +662,7 @@ body {
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
+
 @media (min-width: 480px) {
   .post-template-rocket .rocket-buttons li a {
     font-size: 30px;
@@ -666,26 +685,33 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .post-template-rocket .rocket-buttons li a span.light {
   font-weight: 300;
 }
+
 .post-template-rocket .rocket-buttons li a span.normal {
   font-weight: 400;
 }
+
 .post-template-rocket .rocket-buttons li a span.bold {
   font-weight: 700;
 }
+
 .post-template-rocket .rocket-buttons li a span.semibold {
   font-weight: 600;
 }
+
 .post-template-rocket .rocket-buttons li a span.extrabold {
   font-weight: 800;
 }
+
 .post-template-rocket .rocket-buttons li a span.text {
   font-size: 12px;
   text-transform: uppercase;
   line-height: 14px;
 }
+
 @media (min-width: 480px) {
   .post-template-rocket .rocket-buttons li a span.text {
     font-size: 18px;
@@ -700,22 +726,25 @@ body {
 .post-template-rocket .rocket-buttons li a:visited {
   color: #ffffff;
 }
+
 .post-template-rocket .rocket-buttons li a:after {
   border: 2px solid #ffffff;
   box-shadow: 0 3px 8px #4b484b;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
+
 .post-template-rocket .rocket-buttons li a:hover,
 .post-template-rocket .rocket-buttons li a.active {
   background: #ffffff;
   box-shadow: none;
   color: #c4122f;
 }
+
 .post-template-rocket .rocket-buttons li a:hover:after,
 .post-template-rocket .rocket-buttons li a.active:after {
   border: 2px solid #c4122f;
@@ -741,6 +770,7 @@ body {
   opacity: 0.75;
   right: 10%;
 }
+
 @media (min-width: 480px) {
   .cloud1 {
     right: 0;
@@ -755,7 +785,6 @@ body {
     width: 25vw;
   }
 }
-
 .cloud2 {
   top: 300px;
   z-index: 100;
@@ -763,6 +792,7 @@ body {
   left: 5%;
   width: 120px;
 }
+
 @media (min-width: 480px) {
   .cloud2 {
     left: 10%;
@@ -775,7 +805,6 @@ body {
     width: 28vw;
   }
 }
-
 /*.exhaust-fumes li {
     width: 60px;
     height: 60px;
@@ -853,14 +882,15 @@ body {
   padding: 50px 0;
   text-align: center;
 }
+
 .post-template-rocket .title h1 {
   color: #c4122f;
-  font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+  font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
   font-size: 26vw;
-  text-shadow: -2px -2px 0 #75c1ec, 2px -2px 0 #75c1ec, -2px 2px 0 #75c1ec,
-    2px 2px 0 #75c1ec;
+  text-shadow: -2px -2px 0 #75c1ec, 2px -2px 0 #75c1ec, -2px 2px 0 #75c1ec, 2px 2px 0 #75c1ec;
   text-transform: uppercase;
 }
+
 @media (min-width: 480px) {
   .post-template-rocket .title h1 {
     font-size: 28vw;
@@ -869,14 +899,14 @@ body {
 @media (min-width: 1200px) {
   .post-template-rocket .title h1 {
     font-size: 300px;
-    text-shadow: -3px -3px 0 #75c1ec, 3px -3px 0 #75c1ec, -3px 3px 0 #75c1ec,
-      3px 3px 0 #75c1ec;
+    text-shadow: -3px -3px 0 #75c1ec, 3px -3px 0 #75c1ec, -3px 3px 0 #75c1ec, 3px 3px 0 #75c1ec;
   }
 }
 .post-template-rocket .title h2 {
   font-size: 4vw;
   line-height: 100%;
 }
+
 @media (min-width: 480px) {
   .post-template-rocket .title h2 {
     font-size: 4.25vw;
@@ -899,6 +929,7 @@ body {
   float: left;
   margin-left: 20px;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .logo {
     padding-top: 160px;
@@ -916,6 +947,7 @@ body {
   max-width: 300px;
   width: 100%;
 }
+
 @media (min-width: 920px) {
   .post-template-rocket .logo img {
     max-width: 400px;
@@ -931,6 +963,7 @@ body {
 .post-template-rocket .logo-right {
   padding-top: 15px;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .logo-right {
     width: calc(50% - 30px);
@@ -947,6 +980,7 @@ body {
   float: left;
   margin-left: 20px;
 }
+
 @media (min-width: 760px) {
   .post-template-rocket .copyright {
     text-align: right;
@@ -959,7 +993,6 @@ body {
     margin-left: 20px;
   }
 }
-
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -970,12 +1003,10 @@ body {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
   a:visited {
     text-decoration: underline;
   }
-
   /*a[href]:after {
         content: " (" attr(href) ")";
     }
@@ -983,47 +1014,39 @@ body {
     abbr[title]:after {
         content: " (" attr(title) ")";
     }*/
-  a[href^='#']:after,
-  a[href^='javascript:']:after {
-    content: '';
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
   }
-
   img,
   p {
     page-break-inside: avoid;
   }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   thead {
     display: table-header-group;
   }
-
   tr,
   img {
     page-break-inside: avoid;
   }
-
   img {
     max-width: 100% !important;
   }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
   }
-
   @page {
     size: auto;
     /* auto is the initial value */
@@ -1036,7 +1059,6 @@ body {
   * {
     color: black !important;
   }
-
   h1,
   h2,
   h3,
@@ -1045,11 +1067,9 @@ body {
   h6 {
     color: black !important;
   }
-
   .main-body {
     width: 100%;
   }
-
   header,
   footer,
   .side-column,
@@ -1058,3 +1078,5 @@ body {
     display: none !important;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
