@@ -1,2 +1,0 @@
-$(".pinned").pin({containerSelector: ".side"})
-;
