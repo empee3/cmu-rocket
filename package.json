@@ -8,7 +8,7 @@
     "run": "node index.js",
     "test": "test",
     "scss:build": "sass scss:public/assets/stylesheets",
-    "scss:watch": "sass --watch scss:public/assets/stylesheets"
+    "scss:watch": "sass --no-source-map --watch scss:public/assets/stylesheets"
   },
   "repository": {
     "type": "git",
