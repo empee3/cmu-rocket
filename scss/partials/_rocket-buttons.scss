@@ -1,0 +1,125 @@
+/* ================================
+   Rocket Buttons
+================================ */
+
+.rocket-buttons-inner {
+  padding: 3.75rem 0;
+
+  @media (min-width: $bp-mobile) {
+    width: calc(100% - 2.5rem);
+    float: left;
+    margin-left: 1.25rem;
+  }
+  @media (min-width: $bp-small) {
+    width: calc(75% - 2.188rem);
+    margin-left: calc(12.5% - 1.406rem + 2.5rem);
+  }
+  @media (min-width: $bp-desktop) {
+    width: calc(58.33333% - 1.979rem);
+    margin-left: calc(20.83333% - 1.51rem + 2.5rem);
+  }
+}
+
+.rocket-buttons {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  li {
+    a {
+      background: $red;
+      border: 2px solid $white;
+      border-radius: 50%;
+      box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.5),
+        inset 0 -8px 13px rgba(0, 0, 0, 0.5);
+      color: $white;
+      display: block;
+      height: 3.125rem;
+      font-family: $sans-serif;
+      font-size: 1.25rem;
+      font-weight: $light;
+      position: relative;
+      text-decoration: none;
+      width: 3.125rem;
+      transition: background 0.2s linear;
+
+      span {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &.light {
+          font-weight: $light;
+        }
+        &.normal {
+          font-weight: $normal;
+        }
+        &.semibold {
+          font-weight: $semi-bold;
+        }
+        &.bold {
+          font-weight: $bold;
+        }
+        &.extrabold {
+          font-weight: $x-bold;
+        }
+        &.text {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          line-height: 0.875rem;
+
+          @media (min-width: $bp-mobile) {
+            font-size: 1.125rem;
+            line-height: 100%;
+          }
+          @media (min-width: $bp-small) {
+            font-size: 1.375rem;
+          }
+        }
+      }
+
+      &:visited {
+        color: $white;
+      }
+
+      &:hover,
+      &.visited,
+      &.active {
+        background: $white;
+        box-shadow: none;
+        color: $red;
+      }
+
+      &:hover:after,
+      &.active:after {
+        border: 2px solid $red;
+      }
+
+      &:after {
+        border: 2px solid $white;
+        box-shadow: 0 3px 8px $gray;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      @media (min-width: $bp-mobile) {
+        font-size: 1.875rem;
+        height: 4.375rem;
+        width: 4.375rem;
+      }
+      @media (min-width: $bp-small) {
+        font-size: 3.125rem;
+        height: 5.375rem;
+        width: 5.375rem;
+      }
+    }
+  }
+}
