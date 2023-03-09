@@ -125,9 +125,9 @@ var $jq = jQuery.noConflict();
       }, 800);
     }
 
-    for (var i = 0, len = clouds.length; i < len; i++) {
-      clouds[i].classList.toggle('fade-cloud');
-    }
+    clouds.forEach((cloud) => {
+      cloud.classList.toggle('fade-cloud');
+    });
 
     // Set active state of corresponding bottom button
     currElem = thisQuestion.getAttribute('data-element');
@@ -155,17 +155,17 @@ var $jq = jQuery.noConflict();
   };
 
   // Add event listeners to rocket accordion components and bottom buttons
-  for (var i = 0, len = accordionToggles.length; i < len; i++) {
+  accordionToggles.forEach((accordionToggle, index) => {
     /*if (touchSupported) {
-            accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
-            buttonToggles[i].addEventListener('touchstart', expandAccordion, false);
-        }
-        if (pointerSupported) {
-            accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
-            buttonToggles[i].addEventListener('pointerdown', expandAccordion, false);
-        }*/
-    accordionToggles[i].addEventListener('click', switchAccordion, false);
-    accordionToggles[i].addEventListener(
+        accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+        buttonToggles[i].addEventListener('touchstart', expandAccordion, false);
+      }
+      if (pointerSupported) {
+        accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+        buttonToggles[i].addEventListener('pointerdown', expandAccordion, false);
+    }*/
+    accordionToggle.addEventListener('click', switchAccordion, false);
+    accordionToggle.addEventListener(
       'keydown',
       function (e) {
         var key = e.which.toString();
@@ -176,11 +176,13 @@ var $jq = jQuery.noConflict();
       },
       false
     );
-    buttonToggles[i].addEventListener('click', expandAccordion, false);
+    buttonToggles.forEach((buttonToggle, index) => {
+      buttonToggle.addEventListener('click', expandAccordion, false);
+      buttonToggle.setAttribute('data-element', [index]);
+    });
 
-    accordionToggles[i].setAttribute('data-element', [i]);
-    buttonToggles[i].setAttribute('data-element', [i]);
-  }
+    accordionToggle.setAttribute('data-element', [index]);
+  });
 
   // Rellax
   var rellax = new Rellax('.rellax');
