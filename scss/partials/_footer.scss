@@ -1,0 +1,71 @@
+/* ================================
+   Footer
+  ================================ */
+
+.title {
+  padding: 3.125rem 0;
+  text-align: center;
+}
+
+.logo {
+  padding-top: 3.75rem;
+  text-align: center;
+  width: calc(100% - 2.5rem);
+  float: left;
+  margin-left: 1.25rem;
+
+  @media (min-width: $bp-tablet) {
+    padding-top: 10rem;
+    text-align: right;
+  }
+  @media (min-width: $bp-desktop) {
+    width: calc(87.5% - 2.344rem);
+  }
+
+  img {
+    max-width: 18.75rem;
+    width: 100%;
+
+    @media (min-width: $bp-small) {
+      max-width: 25rem;
+    }
+  }
+}
+
+.logo-left {
+  @media (min-width: $bp-tablet) {
+    width: calc(50% - 31.875rem);
+    float: left;
+    margin-left: 20px;
+  }
+
+}
+
+.logo-right {
+  padding-top: 0.938rem;
+
+  @media (min-width: $bp-tablet) {
+    width: calc(50% - 31.875rem);
+    float: left;
+    margin-left: 1.25rem;
+    padding-top: 0;
+  }
+}
+
+.copyright {
+  font-size: 0.75rem;
+  padding-top: 1.875rem;
+  text-align: center;
+  width: calc(100% - 2.5rem);
+  float: left;
+  margin-left: 1.25rem;
+
+  @media (min-width: $bp-tablet) {
+    text-align: right;
+  }
+  @media (min-width: $bp-desktop) {
+    width: calc(87.5% - 2.344rem);
+    float: left;
+    margin-left: 1.25rem;
+  }
+}

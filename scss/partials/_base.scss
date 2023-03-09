@@ -1,0 +1,158 @@
+//Colors
+
+$blue:  #75c1ec;
+$gray:  #4b484b;
+$red:   #c4122f;
+$white: #ffffff;
+
+//Typography
+
+$sans-serif: 'Open Sans', Arial, sans-serif;
+$sans-serif-condensed: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+
+$thin:      100;
+$x-light:   200;
+$light:     300;
+$normal:    400;
+$medium:    500;
+$semi-bold: 600;
+$bold:      700;
+$x-bold:    800;
+$thick:     900;
+
+// Breakpoints
+$bp-mobile:  30rem; //480px
+$bp-tablet:  47.5rem; //760px
+$bp-small:   57.5rem; //920px
+$bp-desktop: 75rem; //1200px
+$bp-large:   118.75rem; //1900px
+
+
+/* ================================
+   Normalize
+  ================================ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: $sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/* ================================
+  Base (Base)
+================================ */
+
+.skipnav {
+  background: transparent;
+  color: $gray;
+  left: 0;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -4.2rem;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+  &:focus {
+    background: $white;
+    left: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+html {
+  font-size: 100%;
+  color: $gray;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: linear-gradient(to bottom, $blue 0%, $white 100%);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: $gray;
+  font-weight: $normal;
+  font-family: $sans-serif;
+  font-size: 1;
+  line-height: 24px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  margin-bottom: 1.635em;
+  margin-left: 1.5em;
+}
+
+li ul,
+li ol {
+  margin: 0 1.625em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+  Reuseable Classes
+  ================================ */
+
+.screen-reader-text,
+.meta-nav {
+  position: absolute;
+  left: -99999em;
+}
+
+.hidden {
+  display: none;
+}
+
+.paused {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.fade-cloud {
+  -webkit-transition: opacity 1.3s ease-in;
+  transition: opacity 1.3s ease-in;
+  opacity: 0.1 !important;
+}

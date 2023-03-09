@@ -1,0 +1,40 @@
+   
+/* ================================
+  Layout
+  ================================ */
+
+body {
+  min-width: 15.625rem;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, $blue 0%, $white 100%);
+}
+
+.container,
+.contained {
+  max-width: 100rem;
+  padding: 0 1em;
+  margin: 0 auto;
+  display: block;
+
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 95%;
+    padding: 0;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 90%;
+  }
+}

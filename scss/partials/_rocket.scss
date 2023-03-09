@@ -1,0 +1,94 @@
+/* ================================
+   Rocket
+================================ */
+
+.rocket {
+  margin: 15% auto 0 auto;
+  width: 70%;
+  transition: width 0.3s ease-in;
+
+  &:hover {
+    -webkit-animation-play-state: paused;
+     animation-play-state: paused;
+  }
+
+  @media (min-width: $bp-small) {
+      width: 40%;
+  }
+}
+
+.rocket-image {
+  a {
+    display: block;
+    position: relative;
+
+    #smoke {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      transition: opacity 1.3s ease-in;
+
+      &.visible {
+        transition: opacity 1.3s ease-in;
+        opacity: 1;
+        animation: fadeSmoke 2.2s infinite;
+        animation-delay: 1.3s;
+      }
+    }
+  }
+}
+
+.rocket-part {
+  transition: filter 0.3s linear;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+
+  &.propulsion h4 {
+    margin-top: 1.25rem;
+  }
+}
+
+.rocket-text {
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: max-height 0.4s ease-in-out;
+
+  &.is-expanded {
+    max-height: 1000px;
+
+    @media (min-width: $bp-tablet) {
+      max-height: 500px;
+    }
+  }
+
+  p {
+    font: {
+      family: $sans-serif;
+      size: 0.85em;
+      weight: $semi-bold;
+    }
+    line-height: 1.7em;
+    margin-bottom: 0.938rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $bp-tablet) {
+      font-size: 1em;
+    }
+  }
+}
+
+.rocket-text-inner {
+  padding: 20px 0;
+
+  @media (min-width: $bp-tablet) {
+    padding: 36px 0;
+  }
+}
