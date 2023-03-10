@@ -364,6 +364,11 @@ body {
     width: 40%;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .rocket {
+    animation: none;
+  }
+}
 
 .rocket-image a {
   display: block;
@@ -380,8 +385,12 @@ body {
 .rocket-image a #smoke.visible {
   transition: opacity 1.3s ease-in;
   opacity: 1;
-  animation: fadeSmoke 2.2s infinite;
-  animation-delay: 1.3s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rocket-image a #smoke.visible {
+    animation: fadeSmoke 2.2s infinite;
+    animation-delay: 1.3s;
+  }
 }
 
 .rocket-part {
