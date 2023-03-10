@@ -8,13 +8,10 @@ var $jq = jQuery.noConflict();
   var accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
     setAccordionAria,
     switchAccordion,
-    touchSupported = 'ontouchstart' in window,
-    pointerSupported = 'pointerdown' in window,
     buttonToggles = d.querySelectorAll('.rocket-buttons .buttons li a'),
     rocket = d.getElementById('rocket'),
     clouds = d.querySelectorAll('.cloud');
 
-  console.log(prefersReducedMotion);
   // Only add bounce animation if browser is not Safari, and prefers-reduced-motion is not set
   if (!!window.chrome || !!window.sidebar || '\v' == 'v') {
     if (!prefersReducedMotion.matches) {
@@ -55,40 +52,9 @@ var $jq = jQuery.noConflict();
     }
   };
 
-  // Set focus for accessibility
-  /*setFocus = function(element) {
-        element.focus();
-        console.log(document.activeElement);
-        if (element === document.activeElement){ // Checking if the target was focused
-            return false;
-        } else {
-            element.tabIndex = -1; // Adding tabindex for elements not focusable
-            element.focus(); // Setting focus
-         }
-    }*/
-
   scrollToItem = function (element) {
     // jQuery for now
     $jq('html,body').animate({ scrollTop: $jq(element).offset().top }, 600);
-
-    //setFocus(element.querySelector('a'));
-
-    /*var diff = (element.offsetTop-window.scrollY)/20;
-        if (!window._lastDiff) {
-            window._lastDiff = 0;
-        }
-
-        if (Math.abs(diff)>2) {
-            window.scrollTo(0, (window.scrollY+diff))
-            clearTimeout(window._TO)
-
-            if(diff !== window._lastDiff){
-                window._lastDiff = diff;
-                window._TO=setTimeout(scrollToItem, 15, element);
-            }
-        } else {
-            window.scrollTo(0, element.offsetTop)
-        }*/
   };
 
   // Open accordions when rocket component clicked
@@ -110,8 +76,6 @@ var $jq = jQuery.noConflict();
       propulsionImgSmoke = thisQuestion.querySelector('#smoke'); //Smoke image
       propulsionImgSmoke.classList.toggle('visible');
     }
-
-    //setFocus(thisQuestion);
 
     if (thisAnswer.classList.contains('is-collapsed')) {
       setAccordionAria(thisQuestion, thisAnswer, 'true');
@@ -166,14 +130,6 @@ var $jq = jQuery.noConflict();
 
   // Add event listeners to rocket accordion components and bottom buttons
   accordionToggles.forEach((accordionToggle, index) => {
-    /*if (touchSupported) {
-        accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
-        buttonToggles[i].addEventListener('touchstart', expandAccordion, false);
-      }
-      if (pointerSupported) {
-        accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
-        buttonToggles[i].addEventListener('pointerdown', expandAccordion, false);
-    }*/
     accordionToggle.addEventListener('click', switchAccordion, false);
     accordionToggle.addEventListener(
       'keydown',
