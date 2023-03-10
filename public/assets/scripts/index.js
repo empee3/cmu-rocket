@@ -137,17 +137,19 @@ var $jq = jQuery.noConflict();
   };
 
   // Trigger accordion open when bottom button is clicked
-  expandAccordion = function (e) {
-    const buttonElem = e.target,
+  expandAccordion = function (e, buttonToggle) {
+    const buttonElem = buttonToggle,
       aid = buttonElem.getAttribute('href'),
-      aidString = aid.toString().replace('#', '');
-    aidLink = document.getElementById(aidString).getElementsByTagName('img')[0];
+      aidString = aid.toString().replace('#', ''),
+      aidLink = document
+        .getElementById(aidString)
+        .getElementsByTagName('img')[0];
 
     e.preventDefault();
     scrollToItem(document.getElementById(aidString));
 
     // Trigger click on accordion component only if not already expanded
-    //if ((aidLink).parentNode.classList.contains('is-collapsed')) {
+    // if ((aidLink).parentNode.classList.contains('is-collapsed')) {
     setTimeout(function () {
       aidLink.click();
     }, 800);
@@ -169,19 +171,20 @@ var $jq = jQuery.noConflict();
       'keydown',
       function (e) {
         var key = e.which.toString();
-
         if (key.match(/13|32/)) {
           switchAccordion(e);
         }
       },
       false
     );
-    buttonToggles.forEach((buttonToggle, index) => {
-      buttonToggle.addEventListener('click', expandAccordion, false);
-      buttonToggle.setAttribute('data-element', [index]);
-    });
+    accordionToggle.setAttribute('data-element', index);
+  });
 
-    accordionToggle.setAttribute('data-element', [index]);
+  buttonToggles.forEach((buttonToggle, index) => {
+    buttonToggle.addEventListener('click', (e) =>
+      expandAccordion(e, buttonToggle)
+    );
+    buttonToggle.setAttribute('data-element', index);
   });
 
   // Rellax
