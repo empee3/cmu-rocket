@@ -2,6 +2,9 @@ var $jq = jQuery.noConflict();
 
 (function () {
   const d = document;
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  );
   var accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
     setAccordionAria,
     switchAccordion,
@@ -11,9 +14,12 @@ var $jq = jQuery.noConflict();
     rocket = d.getElementById('rocket'),
     clouds = d.querySelectorAll('.cloud');
 
-  // Only add bounce animation if browser is not Safari
+  console.log(prefersReducedMotion);
+  // Only add bounce animation if browser is not Safari, and prefers-reduced-motion is not set
   if (!!window.chrome || !!window.sidebar || '\v' == 'v') {
-    rocket.style.animation = 'bounce 1.4s infinite';
+    if (!prefersReducedMotion.matches) {
+      rocket.style.animation = 'bounce 1.4s infinite';
+    }
   }
 
   // Remove focus outline for users not using keyboard only
@@ -121,7 +127,9 @@ var $jq = jQuery.noConflict();
 
     if (thisQuestion.classList.contains('is-collapsed')) {
       setTimeout(function () {
-        scrollToItem(document.getElementById('rocket-buttons'));
+        if (!prefersReducedMotion.matches) {
+          scrollToItem(document.getElementById('rocket-buttons'));
+        }
       }, 800);
     }
 
@@ -188,5 +196,7 @@ var $jq = jQuery.noConflict();
   });
 
   // Rellax
-  var rellax = new Rellax('.rellax');
+  if (!prefersReducedMotion.matches) {
+    var rellax = new Rellax('.rellax');
+  }
 })();
