@@ -87,7 +87,8 @@ var $jq = jQuery.noConflict();
     thisAnswer.classList.toggle('is-collapsed');
     thisAnswer.classList.toggle('is-expanded');
     thisAnswer.classList.toggle('animateIn');
-    rocket.classList.toggle('paused');
+
+    rocket.classList.toggle('paused'); // Stops the rocket bounce animation while an item is expanded
 
     if (thisQuestion.classList.contains('is-collapsed')) {
       setTimeout(function () {
@@ -97,6 +98,7 @@ var $jq = jQuery.noConflict();
       }, 800);
     }
 
+    // Fade the cloud svgs when an item is expanded for easier reading
     clouds.forEach((cloud) => {
       cloud.classList.toggle('fade-cloud');
     });
