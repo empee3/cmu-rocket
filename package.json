@@ -4,10 +4,10 @@
   "description": "<h1>CMU Rocket</h1>",
   "main": "index.js",
   "scripts": {
-    "start": "run-p run scss:watch",
+    "start": "run-p run scss:build",
     "run": "node index.js",
     "test": "test",
-    "scss:build": "sass scss:public/assets/stylesheets",
+    "scss:build": "sass --no-source-map  scss:public/assets/stylesheets",
     "scss:watch": "sass --no-source-map --watch scss:public/assets/stylesheets"
   },
   "repository": {
